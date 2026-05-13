@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HYDRAS GAMING | Premium Esports Platform</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-[#050505] text-white overflow-x-hidden hydra-bg">
+    <!-- Animated Cyberpunk Background -->
+    <div class="fixed top-0 left-0 w-full h-full pointer-events-none z-[-1]">
+        <div class="absolute w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#00ffff10] via-black to-black"></div>
+        <div class="grid-bg"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-header border-b border-cyan-500/30 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0 flex items-center gap-3 cursor-pointer" id="logo-btn">
+                    <i data-lucide="gamepad-2" class="text-cyan-400 w-8 h-8 neon-text"></i>
+                    <span class="font-orbitron font-bold text-2xl tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600 neon-text">HYDRAS</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8 font-rajdhani text-lg font-medium outline-none">
+                    <a href="#" class="nav-link text-cyan-400 hover:text-cyan-300 transition-colors relative" data-target="home">HOME</a>
+                    <a href="#games" class="nav-link text-gray-300 hover:text-cyan-300 transition-colors relative" data-target="games">GAMES</a>
+                    <a href="#news" class="nav-link text-gray-300 hover:text-cyan-300 transition-colors relative" data-target="news">NEWS</a>
+                    <a href="#tournaments" class="nav-link text-gray-300 hover:text-cyan-300 transition-colors relative" data-target="tournaments">TOURNAMENTS</a>
+                    <a href="#about" class="nav-link text-gray-300 hover:text-cyan-300 transition-colors relative" data-target="about">ABOUT</a>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-4">
+                    <button class="search-btn text-gray-300 hover:text-cyan-400 transition-colors">
+                        <i data-lucide="search" class="w-5 h-5"></i>
+                    </button>
+                    <div id="auth-buttons" class="flex gap-4">
+                        <button id="login-modal-btn" class="font-orbitron px-6 py-2 border border-cyan-500 text-cyan-400 rounded hover:bg-cyan-500/10 transition-all shadow-[0_0_10px_rgba(0,255,255,0.2)] hover:shadow-[0_0_20px_rgba(0,255,255,0.4)] uppercase text-sm font-bold tracking-wider">LOGIN</button>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-cyan-400 focus:outline-none">
+                        <i data-lucide="menu" class="w-8 h-8"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden glass-header border-b border-cyan-500/30">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 font-rajdhani text-lg">
+                <a href="#" class="block px-3 py-2 text-cyan-400">HOME</a>
+                <a href="#games" class="block px-3 py-2 text-gray-300 hover:text-cyan-400">GAMES</a>
+                <a href="#news" class="block px-3 py-2 text-gray-300 hover:text-cyan-400">NEWS</a>
+                <a href="#tournaments" class="block px-3 py-2 text-gray-300 hover:text-cyan-400">TOURNAMENTS</a>
+                <a href="#about" class="block px-3 py-2 text-gray-300 hover:text-cyan-400">ABOUT</a>
+                <div id="mobile-auth-buttons" class="pt-4 flex flex-col gap-2">
+                    <!-- Auth injected here -->
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-20" id="main-content">
+        <!-- Hero Section -->
+        <section class="relative h-[80vh] flex items-center justify-center overflow-hidden banner-container">
+            <!-- Dynamic Banner will be inserted here -->
+            <div id="hero-banner" class="absolute inset-0 bg-center bg-cover bg-no-repeat opacity-40 mix-blend-screen" style="background-image: url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070&auto=format&fit=crop');"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/60 to-transparent"></div>
+            
+            <div class="relative z-10 text-center px-4 max-w-5xl mx-auto flex flex-col items-center">
+                <span class="inline-block py-1 px-3 border border-cyan-500/50 rounded-full text-cyan-400 font-rajdhani tracking-widest text-sm mb-6 bg-cyan-900/20 backdrop-blur-sm animate-pulse">#1 ESPORTS PLATFORM</span>
+                <h1 class="font-orbitron text-5xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-cyan-200 to-blue-500 tracking-tight mb-6 drop-shadow-[0_0_15px_rgba(0,255,255,0.5)]">
+                    DOMINATE THE <br class="hidden md:block" /> VIRTUAL REALM
+                </h1>
+                <p class="font-rajdhani text-xl md:text-2xl text-gray-400 max-w-2xl font-light mb-10">
+                    Join HYDRAS. Access premium games, participate in elite tournaments, and rise through the ranks.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-6">
+                    <button onclick="document.getElementById('login-modal-btn').click()" class="font-orbitron px-8 py-4 bg-cyan-500 text-black font-bold text-lg rounded skew-x-[-10deg] hover:bg-cyan-400 transition-all hover:scale-105 shadow-[0_0_20px_rgba(0,255,255,0.6)] flex items-center gap-2 group">
+                        <div class="skew-x-[10deg] flex items-center gap-2">
+                            <span>JOIN HYDRAS</span>
+                            <i data-lucide="chevron-right" class="group-hover:translate-x-1 transition-transform"></i>
+                        </div>
+                    </button>
+                    <a href="#games" class="font-orbitron px-8 py-4 border border-gray-500 text-white font-bold text-lg rounded skew-x-[-10deg] hover:border-cyan-400 hover:text-cyan-400 transition-all flex items-center gap-2 group bg-black/50 backdrop-blur-sm">
+                        <div class="skew-x-[10deg]">EXPLORE GAMES</div>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce flex flex-col items-center text-gray-500">
+                <span class="font-rajdhani text-sm tracking-widest uppercase mb-2">Scroll Down</span>
+                <i data-lucide="mouse" class="w-6 h-6"></i>
+            </div>
+        </section>
+
+        <!-- Announcements / News Ticker -->
+        <div class="w-full bg-cyan-900/20 border-y border-cyan-500/20 py-2 overflow-hidden flex items-center">
+            <div class="bg-cyan-500 text-black font-orbitron font-bold px-4 py-1 text-sm shrink-0 z-10 w-[120px] text-center">BREAKING</div>
+            <div class="relative w-full overflow-hidden">
+                <div class="marquee-track flex whitespace-nowrap gap-10 font-rajdhani text-cyan-200" id="announcement-ticker">
+                    <!-- Populated by JS -->
+                    <span>Welcome to HYDRAS GAMING - The ultimate esports platform!</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trending / Featured Games Slider -->
+        <section class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-white/5" id="games">
+            <div class="flex items-center justify-between mb-12">
+                <div>
+                    <h2 class="font-orbitron text-3xl md:text-4xl font-bold text-white mb-2 flex items-center gap-3">
+                        <i data-lucide="flame" class="text-orange-500 w-8 h-8"></i>
+                        TRENDING TITLES
+                    </h2>
+                    <p class="font-rajdhani text-gray-400 text-lg">The most played games right now.</p>
+                </div>
+                <div class="hidden md:flex gap-2">
+                    <button class="w-10 h-10 rounded-full border border-gray-600 flex items-center justify-center hover:border-cyan-400 hover:text-cyan-400 transition-colors" id="prev-btn"><i data-lucide="arrow-left"></i></button>
+                    <button class="w-10 h-10 rounded-full border border-gray-600 flex items-center justify-center hover:border-cyan-400 hover:text-cyan-400 transition-colors" id="next-btn"><i data-lucide="arrow-right"></i></button>
+                </div>
+            </div>
+
+            <!-- Games Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="games-grid">
+                <!-- Games populated by JS -->
+            </div>
+        </section>
+
+        <!-- News & Tournaments Section -->
+        <section class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="news">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                <!-- News Column -->
+                <div class="lg:col-span-2">
+                    <h2 class="font-orbitron text-3xl font-bold text-white mb-8 border-l-4 border-cyan-500 pl-4">LATEST NEWS</h2>
+                    <div class="space-y-6" id="news-container">
+                        <!-- News populated by JS -->
+                    </div>
+                </div>
+                
+                <!-- Tournaments Sidebar -->
+                <div id="tournaments">
+                    <h2 class="font-orbitron text-3xl font-bold text-white mb-8 border-l-4 border-purple-500 pl-4">TOURNAMENTS</h2>
+                    <div class="bg-gray-900/50 border border-purple-500/30 rounded-xl p-1 shadow-[0_0_15px_rgba(168,85,247,0.1)]">
+                        <div class="p-5" id="tournaments-container">
+                            <!-- Tournaments populated by JS -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-white/5" id="about">
+            <div class="bg-[#080808] border border-gray-800 rounded-2xl overflow-hidden p-8 relative group hover:border-cyan-500/50 transition-colors">
+                <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div class="relative z-10 flex flex-col md:flex-row items-center gap-10">
+                    <div class="w-48 h-48 rounded-full border-4 border-cyan-500 p-1 flex-shrink-0 relative">
+                        <div class="absolute -inset-4 rounded-full bg-cyan-500/20 blur-xl"></div>
+                        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=400&auto=format&fit=crop" class="w-full h-full rounded-full object-cover">
+                    </div>
+                    <div class="flex-1 text-center md:text-left">
+                        <h2 class="font-orbitron text-3xl md:text-4xl font-bold text-white mb-2">ABOUT THE CREATOR</h2>
+                        <h3 class="font-rajdhani text-cyan-400 text-xl tracking-widest uppercase mb-6">Rituraj_002</h3>
+                        <p class="font-rajdhani text-gray-400 text-lg mb-8 max-w-2xl">
+                            Welcome to HYDRAS GAMING! We bring you the ultimate esports platform with premium gaming experiences. Connect with us on social media for exclusive updates, tournaments, and gaming content.
+                        </p>
+                        <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                            <a href="https://www.instagram.com/rituraj_002?igsh=MXA0cTQ1dGJkYWVnZg==" target="_blank" class="font-orbitron px-6 py-3 border border-pink-500 text-pink-400 rounded hover:bg-pink-500 hover:text-white transition-all shadow-[0_0_10px_rgba(236,72,153,0.2)] hover:shadow-[0_0_20px_rgba(236,72,153,0.6)] uppercase text-sm font-bold flex items-center gap-2">
+                                <i data-lucide="instagram" class="w-5 h-5"></i> INSTAGRAM
+                            </a>
+                            <a href="https://www.instagram.com/channel/Aba93w7O3r9mAm_n/?igsh=aDlsNXAzem9xYTY=" target="_blank" class="font-orbitron px-6 py-3 border border-purple-500 text-purple-400 rounded hover:bg-purple-500 hover:text-white transition-all shadow-[0_0_10px_rgba(168,85,247,0.2)] hover:shadow-[0_0_20px_rgba(168,85,247,0.6)] uppercase text-sm font-bold flex items-center gap-2">
+                                <i data-lucide="radio" class="w-5 h-5"></i> BROADCAST
+                            </a>
+                            <a href="https://youtube.com/@naturelground3582?si=gdQxo2Et374NDFuQ" target="_blank" class="font-orbitron px-6 py-3 border border-red-500 text-red-500 rounded hover:bg-red-500 hover:text-white transition-all shadow-[0_0_10px_rgba(239,68,68,0.2)] hover:shadow-[0_0_20px_rgba(239,68,68,0.6)] uppercase text-sm font-bold flex items-center gap-2">
+                                <i data-lucide="youtube" class="w-5 h-5"></i> YOUTUBE
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-cyan-900/50 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12 border-b border-gray-800 pb-12">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-3 mb-6">
+                        <i data-lucide="gamepad-2" class="text-cyan-400 w-8 h-8 neon-text"></i>
+                        <span class="font-orbitron font-bold text-2xl tracking-wider text-white">HYDRAS</span>
+                    </div>
+                    <p class="font-rajdhani text-gray-400 text-lg max-w-md mb-6">Built for gamers, by gamers. Experience the pinnacle of competitive gaming with premium downloads, stats tracking, and elite tournaments.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 hover:text-cyan-400 hover:bg-gray-800 transition-all"><i data-lucide="youtube" class="w-5 h-5"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 hover:text-cyan-400 hover:bg-gray-800 transition-all"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center text-gray-400 hover:text-cyan-400 hover:bg-gray-800 transition-all"><i data-lucide="twitch" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-orbitron text-white text-lg font-bold mb-6">PLATFORM</h4>
+                    <ul class="font-rajdhani text-gray-400 space-y-3">
+                        <li><a href="#" class="hover:text-cyan-400 transition-colors">Games</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 transition-colors">Tournaments</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 transition-colors">Leaderboards</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 transition-colors">News</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-orbitron text-white text-lg font-bold mb-6">SUPPORT</h4>
+                    <ul class="font-rajdhani text-gray-400 space-y-3">
+                        <li><a href="#" class="hover:text-cyan-400 transition-colors">FAQ</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 transition-colors">Support Center</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 transition-colors">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-cyan-400 transition-colors">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center text-gray-600 font-rajdhani text-sm">
+                <p>&copy; 2026 HYDRAS GAMING. All rights reserved.</p>
+                <p class="mt-2 md:mt-0">Powered by Next-Gen Tech.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login/Register Modal -->
+    <div id="auth-modal" class="fixed inset-0 z-[100] flex items-center justify-center hidden opacity-0 transition-opacity duration-300">
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" id="auth-modal-overlay"></div>
+        <div class="relative w-full max-w-md bg-[#0a0a0a] border border-cyan-500/30 rounded-xl shadow-[0_0_30px_rgba(0,255,255,0.15)] overflow-hidden scale-95 transition-transform duration-300" id="auth-modal-content">
+            <!-- Modal Header -->
+            <div class="relative bg-gradient-to-r from-cyan-900/40 to-black p-6 border-b border-cyan-500/20">
+                <div class="flex items-center gap-3">
+                    <i data-lucide="shield" class="text-cyan-400 w-6 h-6"></i>
+                    <h3 class="font-orbitron font-bold text-xl tracking-wider text-white" id="auth-modal-title">HYDRAS LOGIN</h3>
+                </div>
+                <button id="close-modal-btn" class="absolute top-6 right-6 text-gray-400 hover:text-white transition-colors">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            
+            <!-- Auth Form -->
+            <div class="p-8">
+                <div class="flex gap-4 mb-8 font-orbitron text-sm">
+                    <button class="flex-1 pb-2 border-b-2 border-cyan-500 text-cyan-400 font-bold transition-colors auth-tab" data-tab="login">LOGIN</button>
+                    <button class="flex-1 pb-2 border-b-2 border-gray-700 text-gray-500 hover:text-gray-300 transition-colors auth-tab" data-tab="register">CREATE ACCOUNT</button>
+                </div>
+                
+                <form id="auth-form" class="space-y-5">
+                    <div id="auth-error" class="hidden text-red-500 text-sm font-rajdhani bg-red-500/10 p-3 rounded border border-red-500/30 mb-4"></div>
+                    
+                    <div>
+                        <label class="block font-rajdhani text-gray-400 text-sm mb-2">USERNAME</label>
+                        <div class="relative">
+                            <i data-lucide="user" class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500"></i>
+                            <input type="text" id="username" required class="w-full bg-black border border-gray-700 rounded py-3 pl-10 pr-4 text-white font-rajdhani focus:outline-none focus:border-cyan-500 focus:shadow-[0_0_10px_rgba(0,255,255,0.2)] transition-all placeholder-gray-600" placeholder="Enter your username">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block font-rajdhani text-gray-400 text-sm mb-2">PASSWORD</label>
+                        <div class="relative">
+                            <i data-lucide="lock" class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500"></i>
+                            <input type="password" id="password" required class="w-full bg-black border border-gray-700 rounded py-3 pl-10 pr-4 text-white font-rajdhani focus:outline-none focus:border-cyan-500 focus:shadow-[0_0_10px_rgba(0,255,255,0.2)] transition-all placeholder-gray-600" placeholder="Enter your password">
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="w-full font-orbitron py-3 bg-cyan-500 text-black font-bold rounded hover:bg-cyan-400 transition-all hover:shadow-[0_0_15px_rgba(0,255,255,0.4)] mt-4 tracking-wider" id="auth-submit-btn">
+                        AUTHENTICATE
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div id="search-modal" class="fixed inset-0 z-[100] flex items-start justify-center pt-20 hidden opacity-0 transition-opacity duration-300">
+        <div class="absolute inset-0 bg-black/90 backdrop-blur-sm" id="search-overlay"></div>
+        <div class="relative w-full max-w-2xl px-4 z-10 transition-transform duration-300 translate-y-[-20px]" id="search-content">
+            <div class="relative">
+                <i data-lucide="search" class="absolute left-4 top-1/2 -translate-y-1/2 w-6 h-6 text-cyan-500"></i>
+                <input type="text" id="global-search" class="w-full bg-gray-900 border-2 border-cyan-500/50 rounded-xl py-4 pl-14 pr-12 text-white font-rajdhani text-xl focus:outline-none focus:border-cyan-400 focus:shadow-[0_0_20px_rgba(0,255,255,0.3)] transition-all" placeholder="Search games, news, tournaments...">
+                <button id="close-search-btn" class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white"><i data-lucide="x" class="w-6 h-6"></i></button>
+            </div>
+            
+            <!-- Search Results -->
+            <div id="search-results" class="mt-4 bg-gray-900 border border-gray-800 rounded-xl max-h-[60vh] overflow-y-auto hidden">
+                <!-- dynamic -->
+            </div>
+        </div>
+    </div>
+
+    <script src="/script.js" type="module"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
+
